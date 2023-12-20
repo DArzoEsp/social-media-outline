@@ -1,7 +1,9 @@
 @forward 'breakpoints';
 @forward 'functions';
-@forward 'colors';
-@forward 'fonts';
+// @forward 'colors';
+// @forward 'fonts';
 
 // this folder primary reason is to utilize all styling guides and breakpoints needed for css and javascript.
 // this is efficient and a good way to set up variables and styling as needed
+// things here are mostly things that will not generate any kind of css so functions and breakpoints and mixins but not things like color variables and font
+// will move color variables to global folder

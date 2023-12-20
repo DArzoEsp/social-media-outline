@@ -1,0 +1,6 @@
+@use '../util/' as *; // have to implement in order to utilize the folders we created
+
+.card {
+    padding: rem(20);   // creates padding for cards a clean way of doing css
+}
+
