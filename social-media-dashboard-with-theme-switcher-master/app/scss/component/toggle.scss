@@ -1,10 +1,92 @@
 @use '../util/' as *; // have to implement in order to utilize the folders we created
+@use '../global/' as *;
+// https://codepen.io/SaraSoueidan/pen/jpBbrq
 
 .toggle {
-    &_button {
-        width: rem(16);
-        height: rem(16);
-        border-radius: 50%;
-        background-color: var(--toggle);
+    border: none;
+    position: relative;
+
+    &__wrapper {
+        display: inline-block;
+        position: relative;
+        height: rem(24);
+        width: rem(64);
+        vertical-align: middle;
     }
+
+    input[type="radio"] {
+        position: relative;
+        vertical-align: middle;
+        width: rem(9);
+        margin: rem(0);
+        margin-left: rem(3);
+        transform: scale(1.7);
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    input[type="radio"]:hover {
+        cursor: pointer;
+    }
+
+    &__background {
+        display: block;
+        position: absolute;
+        border-radius: rem(12);
+        overflow: hidden;
+        background: linear-gradient(
+        225deg, var(--toggle-end) 0%,
+        var(--toggle-start) 98.02%);
+        z-index: 0;
+        top:0;
+        left: 0;
+        width: 75%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__button {
+        position: absolute;
+        top: rem(2);
+        left: rem(3);
+        width: rem(16);
+        height: rem(20);
+        border-radius: 50%;
+        background-color: var(--dark-bg);
+        transition: all 1s;
+    }
+
+    #dark:checked ~ &__button  {
+        left: 5%;
+        right: 0%;
+    }
+
+    #system:checked ~ &__button {
+        left: 24%;
+        right: 0%;
+    }
+
+    #light:checked ~ &__button {
+        left: 45%;
+        right: 0%;
+    }
+
+    &__switch:last-child {
+        margin-left: rem(-8);
+    }
+
+    &__switch:first-child {
+        padding-right: rem(10);
+    }
+
+    label {
+        &[for="system"] {
+            display: block;
+            position: relative;
+            top: rem(12);
+            left: rem(5);
+        }
+    }
+
 }
