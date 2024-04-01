@@ -13,11 +13,11 @@
 
   <link rel="stylesheet" href="/dist/style.css">
 
-  <script defer src="/js/script.js"></script> <!-- used for faster rendering of the page -->
-  
   <title>Frontend Mentor | Social Media Outline Light/Dark Mode</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <script defer src="../app/js/script.js"></script> <!-- used for faster rendering of the page -->
+  <script src="https://kit.fontawesome.com/678761f37e.js" crossorigin="anonymous"></script>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -32,75 +32,175 @@
     </div>
     <!--  -->
     <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
-      <label for="dark" class="toggle__switch">Dark</label> 
+      <label for="dark" id="name-bg" class="toggle__switch">Dark</label> 
       <div class="toggle__wrapper">
-        <input type="radio" name="theme" id="dark"/>
-        <input type="radio" name="theme" id="system" checked/>
+        <input type="radio" name="theme" id="dark" checked/>
+        <input type="radio" name="theme" id="system" />
         <input type="radio" name="theme" id="light"/>
         <span aria-hidden="true" class="toggle__background"></span>
         <span aria-hidden="true" class="toggle__button"></span>
-        <label for="system" class="toggle__switch">System</label> 
+        <label hidden="true" class="toggle__switch">System</label> 
       </div>
-      <label for="light" class="toggle__switch">Light</label>
+      <label hidden="true" for="light" class="toggle__switch">Light</label>
     </fieldset>
-    
   </header>
-  <main>
-    @nathanf
-    1987
-    Followers
-    12 Today
+  <main >
+    <div class="main container">
+      <div class="main__top-container">
+        <div class="main__stats">
+          <div class="main__line" style="background: var(--facebook);"></div>
+          <div class="main__acc">
+            <img class="main__img" src="../images/icon-facebook.svg"/>
+            @nathanf
+          </div>
+          <div class="main__gain">1987</div>
+          <div class="main__following">FOLLOWERS</div>
+          <div class="main__today">12 Today</div> 
+        </div>
+        <div class="main__stats">
+          <div class="main__line" style="background: var(--twitter);"></div>
+          <div class="main__acc">
+            <img class="main__img" src="../images/icon-twitter.svg"/>
+            @nathanf
+          </div>
+          <div class="main__gain">1044</div>
+          <div class="main__following">FOLLOWERS</div>
+          <div class="main__today">99 Today</div>
+        </div>
+        <div class="main__stats">
+          <div class="main__line" style="background:linear-gradient(45deg, var(--instagram-start), var(--instagram-end));"></div>
+          <div class="main__acc">
+            <img class="main__img" src="../images/icon-instagram.svg"/>
+            @realnathanf
+          </div>
+          <div class="main__gain">11k</div>
+          <div class="main__following">FOLLOWERS</div>
+          <div class="main__today">1099 Today</div>
+        </div>
+        <div class="main__stats">
+          <div class="main__line" style="background: var(--youtube);"></div>
+          <div class="main__acc">
+            <img class="main__img" src="../images/icon-youtube.svg"/>
+            Nathan F.
+          </div>
+          <div class="main__gain">8239</div>
+          <div class="main__following">SUBSCRIBERS</div>
+          <div class="main__today">144 Today</div>
+        </div>
+      </div>
+    </div>
+    <div class="overview container">
+      <h3>Overview - Today</h3>
+      <div class="overview__bottom-container">
+        <div class="overview__card">
+          <div class="overview__topic">
+            Page Views
+            <img class="overview__img" src="../images/icon-facebook.svg"/>
+          </div>
+          <div class="overview__stat">
+            87
+            <div class="overview__percent">
+              <img src="../images/icon-up.svg" alt="">
+              3%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Likes
+            <img class="overview__img" src="../images/icon-facebook.svg"/>
+          </div>
+          <div class="overview__stat">
+            52
+            <div class="overview__percent">
+              <img src="../images/icon-down.svg" alt="icon up">
+              2%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Likes
+            <img class="overview__img" src="../images/icon-instagram.svg"/>
+          </div>
+          <div class="overview__stat">
+            5462 
+            <div class="overview__percent">
+              <img src="../images/icon-up.svg" alt="">
+              2257%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Profile Views
+            <img class="overview__img" src="../images/icon-instagram.svg"/>
+          </div>
+          <div class="overview__stat">
+            52k
+            <div class="overview__percent">
+              <img class="icon-up" src="../images/icon-up.svg" alt="">
+              1375%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Retweets
+            <img class="overview__img" src="../images/icon-twitter.svg"/>
+          </div>
+          <div class="overview__stat">
+            117
+            <div class="overview__percent">
+              <img src="../images/icon-up.svg" alt="">
+              303%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Likes
+            <img class="overview__img" src="../images/icon-twitter.svg"/>
+          </div>
+          <div class="overview__stat">
+            507
+            <div class="overview__percent">
+              <img src="../images/icon-up.svg" alt="">
+              553%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Likes
+            <img class="overview__img" src="../images/icon-youtube.svg"/>
+          </div>
+          <div class="overview__stat">
+            107
+            <div class="overview__percent">
+              <img src="../images/icon-down.svg" alt="">
+              19%
+            </div>
+          </div>
+        </div>
+        <div class="overview__card">
+          <div class="overview__topic">
+            Total Views
+            <img class="overview__img" src="../images/icon-youtube.svg"/>
+          </div>
+          <div class="overview__stat">
+            1407
+            <div class="overview__percent">
+              <img src="../images/icon-down.svg" alt="">
+              12%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    @nathanf
-    1044
-    Followers
-    99 Today
 
-    @realnathanf
-    11k
-    Followers
-    1099 Today
-
-    Nathan F.
-    8239
-    Subscribers
-    144 Today
-
-
-
-    Overview - Today
-
-    Page Views
-    87
-    3%
-
-    Likes
-    52
-    2%
-
-    Likes
-    5462
-    2257%
-
-    Profile Views
-    52k
-    1375%
-
-    Retweets
-    117
-    303%
-
-    Likes
-    507
-    553%
-
-    Likes
-    107
-    19%
-
-    Total Views
-    1407
-    12%
+    
   </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

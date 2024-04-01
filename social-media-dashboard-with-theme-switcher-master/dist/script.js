@@ -1,2 +1,2 @@
-"use strict";
+"use strict";var mode=document.getElementById("name-bg"),dark=document.getElementById("dark"),system=document.getElementById("system"),light=document.getElementById("light");function isChecked(){return dark.checked?(mode.innerHTML="Dark",localStorage.setItem("mode")):system.checked?(mode.innerHTML="System",localStorage.setItem("name",JSON.stringify(mode.innerHTML))):light.checked?(mode.innerHTML="Light",localStorage.setItem("name",JSON.stringify(mode.innerHTML))):void 0}function init(){dark.addEventListener("click",isChecked),system.addEventListener("click",isChecked),light.addEventListener("click",isChecked)}init();
 //# sourceMappingURL=script.js.map

@@ -4,8 +4,12 @@
 
 .toggle {
     border: none;
-    position: relative;
 
+    @include breakpoint-down(small) {
+        justify-content: end;
+        display: flex;
+    }
+    
     &__wrapper {
         display: inline-block;
         position: relative;
@@ -74,10 +78,15 @@
 
     &__switch:last-child {
         margin-left: rem(-8);
+
     }
 
     &__switch:first-child {
         padding-right: rem(10);
+        
+        @include breakpoint-down(small) {
+            
+        }
     }
 
     label {
